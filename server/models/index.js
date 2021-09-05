@@ -4,7 +4,7 @@ const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const models = {};
 
-const database = 'h3yun';
+const database = 'course-selection-system';
 const username = 'root';
 
 // win

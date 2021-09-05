@@ -3,7 +3,7 @@ const router = express.Router();
 
 // const classroom = require('../controllers/classroom');
 // const course = require('../controllers/course');
-// const student = require('../controllers/student');
+const student = require('../controllers/student');
 // const teacher = require('../controllers/teacher');
 // const score = require('../controllers/score');
 // const circle = require('../controllers/circle');
@@ -23,10 +23,10 @@ const router = express.Router();
 // router.post('/score', score.update);
 // router.get('/score', score.search);
 
-// router.put('/student', student.create);
-// router.delete('/student', student.delete);
-// router.post('/student', student.update);
-// router.get('/student', student.search);
+router.put('/student', student.create);
+router.delete('/student', student.delete);
+router.post('/student', student.update);
+router.get('/student', student.search);
 
 // router.put('/teacher', teacher.create);
 // router.delete('/teacher', teacher.delete);
