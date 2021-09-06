@@ -9,6 +9,5 @@ export interface Student {
   weight: number; // 体重
   classes: string; // 班级
   birthday: string; // 出生
-  homedown: string; // 家乡
   courses: string[]; // 选修的课程
 }

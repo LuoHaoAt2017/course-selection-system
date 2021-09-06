@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { StudentComponent } from './components/student/student.component';
+import { StudentDialog } from './components/student/dialog.component';
 import { ClassroomComponent } from './components/classroom/classroom.component';
 import { CourseComponent } from './components/course/course.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
@@ -13,6 +14,17 @@ import { TeacherComponent } from './components/teacher/teacher.component';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatTableModule } from '@angular/material/table';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 // http
 import { HttpClientModule } from '@angular/common/http';
 import { HttpErrorHandler } from './services/http-error-handler.service';
@@ -23,6 +35,7 @@ import { MessageService } from './services/message.service'
     AppComponent,
     HomeComponent,
     StudentComponent,
+    StudentDialog,
     ClassroomComponent,
     CourseComponent,
     TeacherComponent
@@ -30,11 +43,22 @@ import { MessageService } from './services/message.service'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatSliderModule,
     MatTableModule,
     MatCheckboxModule,
-    HttpClientModule
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatDialogModule,
+    MatInputModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatDividerModule,
+    MatGridListModule,
+    MatMomentDateModule,
+    MatRadioModule,
   ],
   providers: [
     HttpErrorHandler, // 添加的服务要引入app.module.ts，并加入到providers中

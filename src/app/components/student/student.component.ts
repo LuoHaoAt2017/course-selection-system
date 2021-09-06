@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from './student.service';
 import { Student } from './student.interface';
 import { SelectionModel } from '@angular/cdk/collections';
+import { MatDialog } from '@angular/material/dialog';
+import { StudentDialog } from './dialog.component';
 
 @Component({
   selector: 'student-root',
@@ -27,7 +29,8 @@ export class StudentComponent implements OnInit {
   // 告诉表格，哪些列需要展示。
   displayedColumns: string[] = ['position', 'select', 'name', 'gender', 'age', 'weight', 'height', 'birthday', 'courses'];
 
-  constructor(private studentService: StudentService) { }
+  constructor(private studentService: StudentService, public dialog: MatDialog) { 
+  }
 
   ngOnInit() {
     // this.getStudents();
@@ -92,5 +95,14 @@ export class StudentComponent implements OnInit {
   
   masterToggle() {
     this.isAllSelected() ?  this.selection.clear() : this.students.forEach(row => this.selection.select(row));
+  }
+
+  addStudent() {
+    this.dialog.open(StudentDialog, {
+      width: '100%',
+      role: 'dialog'
+      // height: '100%',
+      // direction: 'ltr'
+    });
   }
 }

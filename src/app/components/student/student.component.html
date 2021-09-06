@@ -1,5 +1,16 @@
 <h3 class="student-title">学生信息</h3>
-
+<section class="student-tools">
+  <button mat-icon-button color="primary" (click)="addStudent()">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button mat-icon-button color="warn">
+    <mat-icon>delete</mat-icon>
+  </button>
+  <!-- <button mat-raised-button color="primary">Primary</button>
+  <button mat-raised-button color="accent">Accent</button>
+  <button mat-raised-button color="warn">Warn</button>
+  <button mat-raised-button disabled>Disabled</button> -->
+</section>
 <table mat-table [dataSource]="students" class="mat-elevation-z8 student-table">
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
