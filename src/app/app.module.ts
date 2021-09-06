@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// component
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { StudentComponent } from './components/student/student.component';
 import { ClassroomComponent } from './components/classroom/classroom.component';
 import { CourseComponent } from './components/course/course.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// material
 import { MatSliderModule } from '@angular/material/slider';
+import { MatTableModule } from '@angular/material/table';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+// http
 import { HttpClientModule } from '@angular/common/http';
 import { HttpErrorHandler } from './services/http-error-handler.service';
 import { MessageService } from './services/message.service'
@@ -27,6 +32,8 @@ import { MessageService } from './services/message.service'
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSliderModule,
+    MatTableModule,
+    MatCheckboxModule,
     HttpClientModule
   ],
   providers: [

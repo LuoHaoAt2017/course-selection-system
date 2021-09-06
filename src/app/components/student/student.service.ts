@@ -54,7 +54,7 @@ export class StudentService {
   }
 
   /** DELETE: delete the student from the server */
-  deleteStudent(id: number): Observable<unknown> {
+  deleteStudent(id: string): Observable<unknown> {
     const url = `${this.studentsUrl}/${id}`; // DELETE api/students/42
     return this.http.delete(url, httpOptions)
       .pipe(

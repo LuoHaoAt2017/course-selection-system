@@ -1,4 +1,7 @@
 const { Model } = require('sequelize');
+// homedown: string; // 家乡
+// courses: string[]; // 选修的课程
+
 module.exports = function (sequelize, Sequelize) {
   class Student extends Model {
     static associate(models) {
@@ -25,7 +28,7 @@ module.exports = function (sequelize, Sequelize) {
       allowNull: false,
       primaryKey: true,
     },
-    sname: {
+    name: {
       type: Sequelize.DataTypes.STRING,
       allowNull: false,
     },
@@ -35,6 +38,18 @@ module.exports = function (sequelize, Sequelize) {
     },
     gender: {
       type: Sequelize.DataTypes.BOOLEAN,
+      allowNull: true,
+    },
+    age: {
+      type: Sequelize.DataTypes.INTEGER,
+      allowNull: true,
+    },
+    height: {
+      type: Sequelize.DataTypes.INTEGER,
+      allowNull: true,
+    },
+    weight: {
+      type: Sequelize.DataTypes.INTEGER,
       allowNull: true,
     },
     cid: { // 外键有多的一方维护
