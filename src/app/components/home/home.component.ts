@@ -7,4 +7,6 @@ import { Component, NgModule } from '@angular/core';
 })
 export class HomeComponent {
   title = '首页';
+
+  expression: string = '';
 }

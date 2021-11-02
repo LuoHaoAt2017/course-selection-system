@@ -10,7 +10,9 @@
     "build": "ng build",
     "start": "ng serve --proxy-config proxy.conf.json",
     "watch": "ng build --watch --configuration development",
-    "serve": "nodemon ./server/index.js"
+    "serve": "nodemon ./server/index.js",
+    "commit": "git add . && git-cz",
+    "pub": "npm version patch && git push"
   },
   "dependencies": {
     "@angular/animations": "~12.2.0",
@@ -38,8 +40,12 @@
     "@angular-devkit/build-angular": "~12.2.4",
     "@angular/cli": "~12.2.4",
     "@angular/compiler-cli": "~12.2.0",
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@types/express": "^4.17.13",
     "@types/jasmine": "~3.8.0",
     "@types/node": "^12.11.1",
+    "husky": "^7.0.2",
     "jasmine-core": "~3.8.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
